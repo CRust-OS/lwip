@@ -14,7 +14,7 @@ LWO	:= $(patsubst %.c,%.o,$(LWC))
 
 $(OBJ)/lwip.a: $(LWO)
 		-$(RM) $@
-		$(AR) cqs $@ $^
+		$(LD) -o $@ $^
 
 clean:
 	rm $(LWO)
